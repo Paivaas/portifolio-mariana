@@ -6,7 +6,7 @@ import { ExternalLink } from 'lucide-react';
 export default function Contact() {
   return (
     
-      <section className="w-full flex flex-col gap-4 items-center ">
+      <section className="w-full flex flex-col gap-4 items-center h-[]70vh ">
           <h1 className='text-7xl' style={{ fontFamily: "var(--font-kapakana)" }}>Contato</h1>
           <div>
              <Tabs defaultValue="email" className="w-full h-full flex flex-col justify-center items-center">
