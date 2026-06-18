@@ -2,12 +2,19 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ExternalLink } from 'lucide-react';
 
+function sendWhatsAppMessage() {
+  const phone = "5511960443624";
+  const message = "Oi, Mariana! Vim através do seu portifólio.";
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank");
+}
+
 
 export default function Contact() {
   return (
     
       <section className="w-full flex flex-col gap-4 items-center h-[]70vh ">
-          <h1 className='text-7xl' style={{ fontFamily: "var(--font-kapakana)" }}>Contato</h1>
+          <h1 className='text-4xl md:text-5xl'>Contato</h1>
           <div>
              <Tabs defaultValue="email" className="w-full h-full flex flex-col justify-center items-center">
               <TabsList variant="line">
@@ -31,6 +38,14 @@ export default function Contact() {
                   Ver perfil
                    <ExternalLink size={12}/>
                 </a>
+              </TabsContent>
+
+              <TabsContent value="telefone">
+                <button onClick={sendWhatsAppMessage} className="flex items-center gap-1 cursor-pointer">
+                   Enviar mensagem 
+                   <ExternalLink size={12}/>
+
+                </button>
               </TabsContent>
             </Tabs>
           </div>
